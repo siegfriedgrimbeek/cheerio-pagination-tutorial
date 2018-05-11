@@ -5,8 +5,9 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 const parsedResults = []
-const resultsLimit = 1000
+const resultsLimit = 10
 const url = 'http://listverse.com/'
+const outputFile = 'data.json'
 let pageCounter = 0
 let resultCount = 0
 
@@ -36,7 +37,7 @@ const getWebsiteContent = async (url) => {
 
     pageCounter++
 
-    console.log(chalk.green(`  Scraping page #${pageCounter}: ${nextPageLink}`))
+    console.log(chalk.green(`  Successfully scraped page #${pageCounter}, scraping: ${nextPageLink}`))
 
     if (pageCounter === resultsLimit) {
       exportResults(parsedResults)
@@ -50,12 +51,12 @@ const getWebsiteContent = async (url) => {
 }
 
 const exportResults = (parsedResults) => {
-  fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), (err) => {
+  fs.writeFile(outputFile, JSON.stringify(parsedResults, null, 4), (err) => {
     if (err) {
       console.log(err)
       return false
     }
-    console.log('File successfully written! - Check your project directory for the output.json file')
+    console.log(chalk.red(`\n  Results exported successfully to ${outputFile}\n`))
   })
 }
 
