@@ -1,0 +1,39 @@
+{
+  "name": "cheerio-pagination-tutorial",
+  "version": "1.0.0",
+  "description": "A simple tutorial demonstrating Cheerios ability to scrape multiple webpages.",
+  "author": "Siegfried <siegfried.grimbeek@gmail.com>",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js ./src/index.js",
+    "test": "standard && node my-tests.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  },
+  "keywords": [
+    "cheerio",
+    "request",
+    "nodejs",
+    "scrape"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
+    "nodemon": "^1.15.1"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
