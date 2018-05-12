@@ -5,7 +5,8 @@
   "author": "Siegfried <siegfried.grimbeek@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js ./src/index.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "cheerio",
