@@ -8,6 +8,6 @@ A simple app demonstrating how recursion can be used to scrape a paginated websi
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve app in console
 npm start
 ```

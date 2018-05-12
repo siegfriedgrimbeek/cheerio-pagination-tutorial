@@ -11,7 +11,7 @@ const outputFile = 'data.json'
 let pageCounter = 0
 let resultCount = 0
 
-console.log(chalk.cyan(`\n  Scraping ${url} initiated...\n`))
+console.log(chalk.white.bgBlue(`\n  Scraping of ${chalk.underline.bold(url)} initiated...\n`))
 
 const getWebsiteContent = async (url) => {
   try {
@@ -37,8 +37,7 @@ const getWebsiteContent = async (url) => {
 
     pageCounter++
 
-    console.log(chalk.green(`  Successfully scraped page #${pageCounter}, scraping: ${nextPageLink}`))
-
+    console.log(chalk.cyan(`  Scraping: ${nextPageLink}`))
     if (pageCounter === resultsLimit) {
       exportResults(parsedResults)
       return false
@@ -56,7 +55,7 @@ const exportResults = (parsedResults) => {
       console.log(err)
       return false
     }
-    console.log(chalk.red(`\n  Results exported successfully to ${outputFile}\n`))
+    console.log(chalk.white.bgBlue(`\n ${chalk.underline.bold(parsedResults.length)} Results exported successfully to ${chalk.underline.bold(outputFile)}\n`))
   })
 }
 

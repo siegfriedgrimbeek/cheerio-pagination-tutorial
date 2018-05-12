@@ -3,20 +3,13 @@
   "version": "1.0.0",
   "description": "A simple tutorial demonstrating Cheerios ability to scrape multiple webpages.",
   "author": "Siegfried <siegfried.grimbeek@gmail.com>",
-  "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js ./src/index.js",
-    "test": "standard && node my-tests.js"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "*.json"
-    ]
+    "start": "./node_modules/nodemon/bin/nodemon.js ./src/index.js"
   },
   "keywords": [
     "cheerio",
-    "request",
+    "axios",
     "nodejs",
     "scrape"
   ],
@@ -27,13 +20,9 @@
     "cheerio": "^1.0.0-rc.2",
     "nodemon": "^1.15.1"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  }
 }
