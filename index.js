@@ -21,8 +21,8 @@ const getWebsiteContent = async (url) => {
     // New Lists
     $('.wrapper .main .new article').map((i, el) => {
       const count = resultCount++
-      const title = $(el).find('a').attr('href')
-      const url = $(el).find('h3').text()
+      const url = $(el).find('a').attr('href')
+      const title = $(el).find('h3').text()
       const metadata = {
         count: count,
         title: title,
